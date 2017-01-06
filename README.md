@@ -36,7 +36,7 @@ Android上下拉刷新组件
     
  3.自定义刷新头部和上拉底部
   ```
-     例:只要继承PullHead类即可
+     例:需继承PullHead类
      AndroidVsIosHeaderView  pullRefreshHeadView=new AndroidVsIosHeaderView(this);
      refreshLayout.setPullHeader(pullRefreshHeadView);
      底部同理refreshLayout.setPullFooter(...);
