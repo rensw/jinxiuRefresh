@@ -21,7 +21,7 @@ Android上下拉刷新组件
   ```
      refreshLayout.setIsPullEnable(true);
      refreshLayout.setIsLoadMore(false);
-     refreshView.setOnPullListener(new OnPullListener() {
+     refreshLayout.setOnPullListener(new OnPullListener() {
             @Override
             public void onRefresh() {
                         refreshView.stopRefresh();
