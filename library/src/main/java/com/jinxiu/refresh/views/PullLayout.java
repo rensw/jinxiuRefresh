@@ -4,7 +4,6 @@ import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 
 import com.jinxiu.refresh.inter.OnPullListener;
@@ -51,7 +50,6 @@ public class PullLayout extends InterceptLayout {
             case MotionEvent.ACTION_MOVE:
                 //本次移动的距离Y轴
                 int dy = Y - lastYmove;
-                Log.e("scrollY", dy + "===" + getScrollY());
                 if (dy > 0) {   //下拉刷新
                     if (header != null) {
                         //开始滑动

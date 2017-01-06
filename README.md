@@ -3,7 +3,8 @@ Android上下拉刷新组件
   
 #  使用
  1.布局文件中添加 RefreshLayout
-  ```<com.jinxiu.refresh.views.RefreshLayout
+  ```
+  <com.jinxiu.refresh.views.RefreshLayout
         android:id="@+id/refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
