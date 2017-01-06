@@ -6,14 +6,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
 
+import com.jinxiu.refresh.PullFoot;
+import com.jinxiu.refresh.PullHead;
+
 /**
  * Created by rsw on 17/1/5.
  * 下拉刷新类
  */
 public abstract class RefreshView extends ViewGroup {
 
-    View header;
-    View footer;
+    PullHead header;
+    PullFoot footer;
     public int bottomScroll;  //滚动到底部Y轴所需要的滑动值
     public int lastChildIndex; //最后一个child的索引
     public boolean isLoadMore = true;  //加载更多可用
@@ -27,16 +30,12 @@ public abstract class RefreshView extends ViewGroup {
         super(context, attrs);
     }
 
-    public void addHeaderView(View headerView) {
-        this.header = headerView;
+    public void addHeaderView() {
         LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         addView(header, layoutParams);
     }
 
-
-
-    public void addFooterView(View footerView) {
-        this.footer = footerView;
+    public void addFooterView() {
         LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         addView(footer, layoutParams);
     }

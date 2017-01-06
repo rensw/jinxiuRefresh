@@ -26,8 +26,6 @@ public class RefreshLayout extends InterceptLayout {
     private boolean isRefreshSuccess = false;
     //是否加载完成
     private boolean isLoadSuccess = false;
-    PullHead pullHeader;
-    PullFoot pullFooter;
 
     public RefreshLayout(Context context) {
         super(context);
@@ -230,44 +228,44 @@ public class RefreshLayout extends InterceptLayout {
                 onDefault();
                 break;
             case DOWN_AFTER:
-                pullHeader.onDownAfter(scrollY);
+                header.onDownAfter(scrollY);
                 break;
             case DOWN_START:
-                pullHeader.onDownBefore(scrollY);
+                header.onDownBefore(scrollY);
                 break;
             case REFRESH_SCROLLING:
-                pullHeader.onRefreshScrolling(scrollY);
+                header.onRefreshScrolling(scrollY);
                 break;
             case REFRESH_DOING:
-                pullHeader.onRefreshDoing(scrollY);
+                header.onRefreshDoing(scrollY);
                 if (onPullListener != null)
                     onPullListener.onRefresh();
                 break;
             case REFRESH_COMPLETE_SCROLLING:
-                pullHeader.onRefreshCompleteScrolling(scrollY, isRefreshSuccess);
+                header.onRefreshCompleteScrolling(scrollY, isRefreshSuccess);
                 break;
             case REFRESH_CANCEL_SCROLLING:
-                pullHeader.onRefreshCancelScrolling(scrollY);
+                header.onRefreshCancelScrolling(scrollY);
                 break;
             case UP_START:
-                pullFooter.onUpBefore(scrollY);
+                footer.onUpBefore(scrollY);
                 break;
             case UP_AFTER:
-                pullFooter.onUpAfter(scrollY);
+                footer.onUpAfter(scrollY);
                 break;
             case LOAD_MORE_SCROLLING:
-                pullFooter.onLoadScrolling(scrollY);
+                footer.onLoadScrolling(scrollY);
                 break;
             case LOAD_MORE_DOING:
-                pullFooter.onLoadDoing(scrollY);
+                footer.onLoadDoing(scrollY);
                 if (onPullListener != null)
                     onPullListener.onLoadMore();
                 break;
             case LOAD_MORE_COMPLETE_SCROLLING:
-                pullFooter.onLoadCompleteScrolling(scrollY, isLoadSuccess);
+                footer.onLoadCompleteScrolling(scrollY, isLoadSuccess);
                 break;
             case LOAD_MORE_CANCEL_SCROLLING:
-                pullFooter.onLoadCancelScrolling(scrollY);
+                footer.onLoadCancelScrolling(scrollY);
                 break;
         }
     }
@@ -302,30 +300,29 @@ public class RefreshLayout extends InterceptLayout {
     }
 
     public void setPullHeader(PullHead pullHeader) {
-        this.pullHeader = pullHeader;
-        addHeaderView(pullHeader);
+        this.header = pullHeader;
     }
 
     public void setPullFooter(PullFoot pullFooter) {
-        this.pullFooter = pullFooter;
-        addFooterView(pullFooter);
+        this.footer = pullFooter;
     }
 
     @Override
-    protected void onFinishInflate() {
-        super.onFinishInflate();
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
         init();
     }
 
     public void init() {
-        if(pullHeader==null){
-            pullHeader= new HeadView(getContext());
+        if(header==null){
+            header= new HeadView(getContext());
         }
-        if(pullFooter==null){
-            pullFooter = new FootView(getContext());
+        if(footer==null){
+            footer = new FootView(getContext());
         }
-        setPullHeader(pullHeader);
-        setPullFooter(pullFooter);
+        addHeaderView();
+        addFooterView();
+
     }
 
 }
