@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context="com.jinxiu.refreshDemo.MainActivity">
+
+    <TextView
+        android:id="@+id/listView_demo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        style="@style/btn_style"
+        android:text="ListView demo"/>
+
+    <TextView
+        android:id="@+id/webView_demo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        style="@style/btn_style"
+        android:text="webView demo"/>
+
+
+    <TextView
+        android:id="@+id/ScrollView_demo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        style="@style/btn_style"
+        android:text="ScrollView demo"/>
+
+    <TextView
+        android:id="@+id/recycleView_demo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        style="@style/btn_style"
+        android:text="recycleView demo"/>
+
+    <TextView
+        android:id="@+id/other_demo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        style="@style/btn_style"
+        android:text="其他View Demo(例TextView)"/>
+</LinearLayout>
