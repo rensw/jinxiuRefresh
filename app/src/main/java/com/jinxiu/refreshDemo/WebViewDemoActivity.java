@@ -31,7 +31,7 @@ public class WebViewDemoActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        webView.loadUrl("http://101.201.239.59");
+        webView.loadUrl("http://www.baidu.com");
         refreshLayout.setIsLoadMore(false);
         refreshLayout.setIsPullEnable(true);
         refreshLayout.setOnPullListener(new OnPullListener() {

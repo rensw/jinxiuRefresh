@@ -43,10 +43,10 @@ public class ListViewDemoActivity extends AppCompatActivity {
         refreshLayout.setOnPullListener(new OnPullListener() {
             @Override
             public void onRefresh() {
-                mList.clear();
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        mList.clear();
                         mList.addAll(getList());
                         arrayAdapter.notifyDataSetChanged();
                         refreshLayout.stopRefresh();

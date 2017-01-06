@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.jinxiu.refresh.custom.AndroidVsIosHeaderView;
 import com.jinxiu.refresh.inter.OnPullListener;
 import com.jinxiu.refresh.views.RefreshLayout;
 import com.jinxiu.refreshDemo.adapter.ViewHolder;
 import com.jinxiu.refreshDemo.adapter.recyclerview.BaseHeadAdapter;
+import com.jinxiu.refreshDemo.views.PullRefreshHeadView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,13 +50,15 @@ public class RecycleViewDemoActivity extends AppCompatActivity {
             }
         };
         recyclerView.setAdapter(baseHeadAdapter);
+        AndroidVsIosHeaderView  pullRefreshHeadView=new AndroidVsIosHeaderView(this);
+        refreshLayout.setPullHeader(pullRefreshHeadView);
         refreshLayout.setOnPullListener(new OnPullListener() {
             @Override
             public void onRefresh() {
-                mList.clear();
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        mList.clear();
                         mList.addAll(getList());
                         baseHeadAdapter.notifyDataSetChanged();
                         refreshLayout.stopRefresh();
