@@ -34,7 +34,7 @@ Android上下拉刷新组件
      });
    ```
     
- 3.自定义刷新头部和上拉底部
+ 3.自定义刷新头部和上拉底部(不设置即默认)
   ```
      例:需继承PullHead类
      AndroidVsIosHeaderView  pullRefreshHeadView=new AndroidVsIosHeaderView(this);
