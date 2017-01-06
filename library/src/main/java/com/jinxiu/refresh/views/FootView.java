@@ -2,18 +2,17 @@ package com.jinxiu.refresh.views;
 
 import android.content.Context;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.jinxiu.refresh.R;
-import com.jinxiu.refresh.inter.pullFooter;
+import com.jinxiu.refresh.inter.PullFoot;
 
 
 /**
  * Created by apple on 17/1/5.
  * 加载更多View
  */
-public class FootView extends FrameLayout implements pullFooter {
+public class FootView extends PullFoot {
 
     private TextView textView;
     String loadBeforeStr = "上拉加载更多";

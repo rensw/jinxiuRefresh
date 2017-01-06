@@ -234,7 +234,7 @@ public class InterceptLayout extends RefreshView {
 
         boolean isIntercept = false;
         WebView webView = (WebView) child;
-        if (webView.getContentHeight() * 3 == webView.getScrollY() + webView.getHeight())
+        if (webView.getContentHeight() * webView.getScale() == webView.getScrollY() + webView.getHeight())
             isIntercept = true;
         return isIntercept;
     }

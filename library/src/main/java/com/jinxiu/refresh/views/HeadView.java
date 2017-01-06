@@ -2,18 +2,17 @@ package com.jinxiu.refresh.views;
 
 import android.content.Context;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.jinxiu.refresh.R;
-import com.jinxiu.refresh.inter.PullHeader;
+import com.jinxiu.refresh.inter.PullHead;
 
 
 /**
  * Created by apple on 17/1/5.
  * 下拉刷新View
  */
-public class HeadView extends FrameLayout implements PullHeader {
+public class HeadView extends PullHead {
 
     private TextView textView;
     String refreshBeforeStr = "下拉刷新";
@@ -26,10 +25,15 @@ public class HeadView extends FrameLayout implements PullHeader {
 
     public HeadView(Context context) {
         super(context);
-        View headView = View.inflate(context, R.layout.layout_header, this);
+        initView();
+    }
+
+    private void initView() {
+        View headView = View.inflate(getContext(), R.layout.layout_header, this);
         textView = (TextView) headView.findViewById(R.id.tv);
         refreshHeight = getMeasuredHeight();
     }
+
 
     @Override
     public void onDownBefore(int scrollY) {
@@ -60,4 +64,5 @@ public class HeadView extends FrameLayout implements PullHeader {
     public void onRefreshCancelScrolling(int scrollY) {
         textView.setText(refreshCancelStr);
     }
+
 }

@@ -12,8 +12,8 @@ import android.widget.ScrollView;
  */
 public abstract class RefreshView extends ViewGroup {
 
-    HeadView header;
-    FootView footer;
+    View header;
+    View footer;
     public int bottomScroll;  //滚动到底部Y轴所需要的滑动值
     public int lastChildIndex; //最后一个child的索引
     public boolean isLoadMore = true;  //加载更多可用
@@ -27,14 +27,16 @@ public abstract class RefreshView extends ViewGroup {
         super(context, attrs);
     }
 
-    public void addHeader(HeadView header) {
-        this.header = header;
+    public void addHeaderView(View headerView) {
+        this.header = headerView;
         LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         addView(header, layoutParams);
     }
 
-    public void addFooter(FootView footer) {
-        this.footer = footer;
+
+
+    public void addFooterView(View footerView) {
+        this.footer = footerView;
         LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         addView(footer, layoutParams);
     }
