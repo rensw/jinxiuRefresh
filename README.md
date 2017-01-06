@@ -34,12 +34,16 @@ Android上下拉刷新组件
      });
    ```
     
- 3.自定义刷新头部和上拉底部 可在HeadView.class和FootView.class直接修改
-     
+ 3.自定义刷新头部和上拉底部
+  ```
+     例:只要继承PullHead类即可
+     AndroidVsIosHeaderView  pullRefreshHeadView=new AndroidVsIosHeaderView(this);
+     refreshLayout.setPullHeader(pullRefreshHeadView);
+     底部同理refreshLayout.setPullFooter(...);
+   ```
 # Preview
-![Preview](http://im2.ezgif.com/tmp/ezgif.com-0bca7b6483.gif)
-![Preview](http://im2.ezgif.com/tmp/ezgif.com-c42f9aa64d.gif)
-![Preview](http://im2.ezgif.com/tmp/ezgif.com-1535adc674.gif)
-![Preview](http://im2.ezgif.com/tmp/ezgif.com-2366286641.gif)
-![Preview](http://im2.ezgif.com/tmp/ezgif.com-46ea663ae1.gif)
-  
+![Preview](./imgs/recycleView.gif)
+![Preview](./imgs/ezgif.com-7e41af9515.gif)
+![Preview](./imgs/ezgif.com-49507a3c2e.gif)
+![Preview](./imgs/ezgif.com-bcb7dcadcd.gif)
+
