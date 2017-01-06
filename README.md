@@ -37,7 +37,7 @@ Android上下拉刷新组件
  3.自定义刷新头部和上拉底部 可在HeadView.class和FootView.class直接修改
      
 # Preview
-![Preview](http://im2.ezgif.com/tmp/ezgif.com-377204868e.gif)
+![Preview](http://im2.ezgif.com/tmp/ezgif.com-0bca7b6483.gif)
 ![Preview](http://im2.ezgif.com/tmp/ezgif.com-c42f9aa64d.gif)
 ![Preview](http://im2.ezgif.com/tmp/ezgif.com-1535adc674.gif)
 ![Preview](http://im2.ezgif.com/tmp/ezgif.com-2366286641.gif)
