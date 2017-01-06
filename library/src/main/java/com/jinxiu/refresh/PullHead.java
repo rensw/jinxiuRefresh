@@ -1,4 +1,4 @@
-package com.jinxiu.refresh.inter;
+package com.jinxiu.refresh;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -9,6 +9,8 @@ import android.widget.FrameLayout;
  * 下拉刷新接口
  */
 public abstract class PullHead extends FrameLayout{
+
+
 
     public PullHead(Context context) {
         super(context);
@@ -27,7 +29,7 @@ public abstract class PullHead extends FrameLayout{
     //准备刷新(从松手后的位置滚动到刷新的位置)
     public abstract void onRefreshScrolling(int scrollY);
 
-    //正在刷新……
+    //正在刷新……....
     public abstract void onRefreshDoing(int scrollY);
 
     //刷新完成

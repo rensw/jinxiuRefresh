@@ -6,9 +6,9 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
+import com.jinxiu.refresh.PullFoot;
+import com.jinxiu.refresh.PullHead;
 import com.jinxiu.refresh.inter.OnPullListener;
-import com.jinxiu.refresh.inter.PullFoot;
-import com.jinxiu.refresh.inter.PullHead;
 import com.jinxiu.refresh.inter.RefreshStates;
 
 /**

@@ -1,4 +1,4 @@
-package com.jinxiu.refresh.inter;
+package com.jinxiu.refresh;
 
 import android.content.Context;
 import android.util.AttributeSet;

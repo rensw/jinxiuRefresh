@@ -4,8 +4,8 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
+import com.jinxiu.refresh.PullHead;
 import com.jinxiu.refresh.R;
-import com.jinxiu.refresh.inter.PullHead;
 
 
 /**
