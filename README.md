@@ -1,5 +1,10 @@
 # jinxiuRefresh
 Android上下拉刷新组件
+
+# compile
+  ```
+  compile 'com.jinxiu:refresh:1.0.0'
+  ```
   
 #  使用
  1.布局文件中添加 RefreshLayout(支持RecycleView、AdapterView,ScrollView,WebView,TextView...)
